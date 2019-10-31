@@ -42,6 +42,13 @@ modules:
     requires:
      - name: uaa_TestLoqate
      - name: dest_TestLoqate
+     - name: srv_api
+       group: destinations
+       properties:
+         forwardAuthToken: true
+         strictSSL: false
+         name: srv_api
+         url: ~{url}
 
 resources:
   - name: TestLoqate-db-hdi-container

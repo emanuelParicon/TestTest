@@ -1,14 +1,17 @@
 {
-  "welcomeFile": "/TestHTTPRequests/index.html",
-  "authenticationMethod": "route",
-  "logout": {
-    "logoutEndpoint": "/do/logout"
-  },
-  "routes": [
-    {
-      "source": "^/TestHTTPRequests/(.*)$",
-      "target": "$1",
-      "localDir": "webapp"
-    }
-  ]
+	"welcomeFile": "/TestHTTPRequests/index.html",
+	"authenticationMethod": "route",
+	"logout": {
+		"logoutEndpoint": "/do/logout"
+	},
+	"routes": [{
+		"source": "/odata/v2/",
+		"authenticationType": "none",
+		"destination": "srv_api",
+		"csrfProtection": false
+	}, {
+		"source": "^/TestHTTPRequests/(.*)$",
+		"target": "$1",
+		"localDir": "webapp"
+	}]
 }

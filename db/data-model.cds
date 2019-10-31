@@ -8,4 +8,5 @@ entity Student : managed {
 	lastName : String;
 	semester : Integer;
 	studiengang : String;
+	
 }
