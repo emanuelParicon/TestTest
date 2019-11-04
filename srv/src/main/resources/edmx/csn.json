@@ -102,11 +102,23 @@
       },
       "$syntax": "projection"
     },
+    "CatalogService.getApprovalStatus": {
+      "kind": "function",
+      "params": {
+        "customerID": {
+          "@cds.persistence.name": "CUSTOMERID",
+          "type": "cds.Integer"
+        }
+      },
+      "returns": {
+        "type": "cds.Boolean"
+      }
+    },
     "CatalogService.greed": {
       "kind": "function",
       "params": {
-        "name": {
-          "@cds.persistence.name": "NAME",
+        "to": {
+          "@cds.persistence.name": "TO",
           "type": "cds.String"
         }
       },

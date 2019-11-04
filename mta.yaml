@@ -10,6 +10,7 @@ modules:
       disk-quota: 256M
     requires:
       - name: TestLoqate-db-hdi-container
+      
   - name: TestLoqate-srv
     type: java
     path: srv
@@ -25,12 +26,6 @@ modules:
           JBP_CONFIG_RESOURCE_CONFIGURATION: '[tomcat/webapps/ROOT/META-INF/context.xml:
             {"service_name_for_DefaultDB" : "~{hdi-container-name}"}]'
 
-  
-
-
-  
-
-
   - name: TestHTTPRequests
     type: html5
     path: TestHTTPRequests
@@ -45,9 +40,8 @@ modules:
      - name: srv_api
        group: destinations
        properties:
-         forwardAuthToken: true
-         strictSSL: false
          name: srv_api
+         forwardAuthToken: false
          url: ~{url}
 
 resources:

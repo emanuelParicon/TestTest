@@ -13,8 +13,11 @@
     <Schema Namespace="CatalogService" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
       <EntityContainer Name="EntityContainer" m:IsDefaultEntityContainer="true">
         <EntitySet Name="Student" EntityType="CatalogService.Student"/>
+        <FunctionImport Name="getApprovalStatus" ReturnType="Edm.Boolean" m:HttpMethod="GET">
+          <Parameter Name="customerID" Type="Edm.Int32" Mode="In" Nullable="true"/>
+        </FunctionImport>
         <FunctionImport Name="greed" ReturnType="Edm.String" m:HttpMethod="GET">
-          <Parameter Name="name" Type="Edm.String" Mode="In" Nullable="true"/>
+          <Parameter Name="to" Type="Edm.String" Mode="In" Nullable="true"/>
         </FunctionImport>
       </EntityContainer>
       <EntityType Name="Student">

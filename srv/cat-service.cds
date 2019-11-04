@@ -6,7 +6,10 @@ service CatalogService {
   
   
   //functions
-  function greed(name : String) returns String;
+  function greed(to : String) returns String;
+  //e.g.function sap help
+  function getApprovalStatus(customerID:Integer) returns Boolean;
+  
   
   //actions
   
